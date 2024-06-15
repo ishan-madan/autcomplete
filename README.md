@@ -94,26 +94,26 @@ Autocomplete demonstrates a graphical user interface (GUI) that provides autocom
    - **Step 1: Starting the Program**
      - Open the project folder, navigate to the `src` folder, open the `AutocompleteMain.java` file.
    <p align="center">
-   <img src="ReadMe%20Images/step1.png" height="60%" width="60%" alt="Starting the Program Image"/>
+   <img src="ReadMe%20Images/step1.png" height="60%" width="60%" alt="Finding the main method"/>
    </p>
 
    - **Step 2: Select Autocomplete Class and Run**
      - Uncomment the autocomplete algorithm you would like to use and run the main method.
    <p align="center">
-   <img src="ReadMe%20Images/step2.png" height="60%" width="60%" alt="Image Analysis Dataflow"/>
+   <img src="ReadMe%20Images/step2.png" height="60%" width="60%" alt="Selecting autocomplete class"/>
    </p>
 
    - **Step 3: Select Data File**
      - Select the `data` folder and then selct the `.txt` file you would like to use as your autocomplete data source
    <p align="center">
-   <img src="ReadMe%20Images/step3.png" height="40%" width="40%" display="inline-block" alt="Image Analysis Dataflow"/>
-   <img src="ReadMe%20Images/step4.png" height="40%" width="40%" display="inline-block" alt="Image Analysis Dataflow"/>
+   <img src="ReadMe%20Images/step3.png" height="40%" width="40%" display="inline-block" alt="Selecting data folder"/>
+   <img src="ReadMe%20Images/step4.png" height="40%" width="40%" display="inline-block" alt="Selecting source file"/>
    </p>
 
    - **Step 4: Autocompletion**
      - Watch as the program autocomplete your search! Double-click to open in Google!
    <p align="center">
-   <img src="ReadMe%20Images/step5.png" height="60%" width="60%" alt="Image Analysis Dataflow"/>
+   <img src="ReadMe%20Images/step5.png" height="60%" width="60%" alt="Autocompleting"/>
    </p>
 
 
