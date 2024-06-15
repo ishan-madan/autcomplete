@@ -1,44 +1,66 @@
  # $\textsf{\color{lime} Autocomplete}$
 
 ## $\textsf{\color{purple} Description}$
-This project consists of several Java classes designed to provide functionality for graphics drawing, geographical calculations, and graph operations.
+Autocomplete demonstrates a graphical user interface (GUI) that provides autocomplete suggestions based on user input. It supports multiple autocomplete algorithms such as Brute Force, Binary Search, and Hash List, each offering different trade-offs between speed and memory usage. Users can input text, receive autocomplete suggestions, and perform online searches directly from the application.
 
 ## $\textsf{\color{purple} Class Overview}$
 
-### 1. StdDraw.java
-**Overview:** Provides a simple graphics library for drawing shapes, lines, text, and handling mouse and keyboard interactions.
+### 1. Autocompletor Interface
+**Overview:** Defines methods for autocomplete functionality, including initialization and retrieving top matching terms.
 **Key Features:**
-- Drawing basic shapes: squares, circles, polygons.
-- Setting pen color and radius.
-- Handling mouse events (clicks, movements) and keyboard events (presses).
-- Loading and displaying images.
-- Buffering and displaying graphics.
+- `topMatches(String prefix, int k)`: Returns top k matching terms based on a prefix.
+- `initialize(String[] terms, double[] weights)`: Initializes internal state with terms and corresponding weights.
+- `sizeInBytes()`: Computes total memory usage in bytes after initialization.
 
-
-### 2. Point.java
-**Overview:** Represents an immutable latitude-longitude coordinate point on Earth.
+### 2. BruteAutocomplete.java
+**Overview:** Implements autocomplete using a brute force approach.
 **Key Features:**
-- Calculates straight-line distance between points using the Haversine formula.
-- Implements Comparable interface for sorting.
-- Overrides equals(), hashCode(), toString(), and compareTo() methods for proper object comparison and printing.
+- Linear search for finding matching terms.
+- Suitable for small datasets or when simplicity is preferred.
 
-### 3. GraphProcessor.java
-**Overview:** Manages a weighted graph of latitude-longitude points and supports various distance and routing operations.
+### 3. BinarySearchAutocomplete.java
+**Overview:** Implements autocomplete using binary search on a sorted dataset.
 **Key Features:**
-- Reads graph data from a .graph file to initialize points and edges.
-- Finds the nearest point to a given point in the graph.
-- Calculates the total distance along a route of points in the graph.
-- Checks connectivity between two points in the graph.
-- Computes the shortest path between two points using Dijkstra's algorithm.
-- Throws exceptions for invalid input or unreachable destinations.
+- Efficient retrieval of matching terms using binary search.
+- Requires the data to be sorted beforehand.
 
-### 4. GraphDemo.java
-**Overview:** Demonstrates the usage of GraphProcessor and Point classes in a practical scenario.
+### 4. HashListAutocomplete.java
+**Overview:** Implements autocomplete using a hash list for efficient term retrieval.
 **Key Features:**
-- Reads input data from usa.graph and uscities.csv to populate graph data.
-- Prompts user for starting and ending points via console input.
-- Uses visualization (assumed Visualize class) to draw routes on a map.
-- Measures and displays computational time for route calculation.
+- Uses hash tables to store and retrieve terms.
+- Balances speed and memory usage, suitable for medium to large datasets.
+
+### 5. AutocompleteGUI.java
+**Overview:** Provides a graphical user interface for interacting with autocomplete functionality.
+**Key Features:**
+- Allows users to input text and receive autocomplete suggestions.
+- Supports online search functionality based on selected suggestions.
+- Integrates with different autocomplete implementations based on user selection.
+
+### 6. FileSelector.java
+**Overview:** Utility class for selecting files from the system.
+**Key Features:**
+- Provides methods to select a file for loading autocomplete data.
+- Used by AutocompleteGUI to initialize autocomplete implementations from a chosen file.
+
+### 7. AutocompleteMain.java
+**Overview:** Main class to initialize the GUI with selected autocomplete implementation.
+**Key Features:**
+- Configures and launches the GUI with user-selected autocomplete implementation (Brute Force, Binary Search, or Hash List).
+- Handles file selection and GUI initialization.
+- Directs user interaction with autocomplete functionality and online search.
+
+### 8. Term.java
+**Overview:** Represents a term with associated weight for autocomplete purposes.
+**Key Features:**
+- Stores a word (term) and its weight.
+- Provides methods to retrieve the word and weight.
+
+### 9. AutocompleteData.txt (Sample)
+**Overview:** Sample text file containing autocomplete data.
+**Key Features:**
+- Format: `weight\tterm`.
+- Used by AutocompleteMain to initialize autocomplete implementations.
 
 ## $\textsf{\color{purple} Languages and Utilities Used}$
 - Java
@@ -55,7 +77,7 @@ This project consists of several Java classes designed to provide functionality 
      ```
      git clone <repository_url>
      ```
-     Replace `<repository_url>` with the actual URL of your GitHub repository.
+     Replace `<repository_url>` with the actual URL of the GitHub repository.
 
 ## $\textsf{\color{purple} Setting Up the Environment}$
 
@@ -70,27 +92,28 @@ This project consists of several Java classes designed to provide functionality 
 
 3. **Program Walkthrough:**
    - **Step 1: Starting the Program**
-     - Open the project folder, navigate to the `src` folder, open the `GraphDemo.java` file, and run the `main` method.
+     - Open the project folder, navigate to the `src` folder, open the `AutocompleteMain.java` file.
    <p align="center">
-   <img src="ReadMe%20Images/step1.png" height="60%" width="60%" alt="Image Analysis Dataflow"/>
+   <img src="ReadMe%20Images/step1.png" height="60%" width="60%" alt="Starting the Program Image"/>
    </p>
 
-   - **Step 2: Input Origin Location**
-     - Input the origin location in the City State format in the terminal (e.g. New York NY)
+   - **Step 2: Select Autocomplete Class and Run**
+     - Uncomment the autocomplete algorithm you would like to use and run the main method.
    <p align="center">
    <img src="ReadMe%20Images/step2.png" height="60%" width="60%" alt="Image Analysis Dataflow"/>
    </p>
 
-   - **Step 3: Input Destination Location**
-     - Input the destination location in the City State format in the terminal (e.g. New York NY)
+   - **Step 3: Select Data File**
+     - Select the `data` folder and then selct the `.txt` file you would like to use as your autocomplete data source
    <p align="center">
-   <img src="ReadMe%20Images/step3.png" height="60%" width="60%" alt="Image Analysis Dataflow"/>
+   <img src="ReadMe%20Images/step3.png" height="40%" width="40%" display="inline-block" alt="Image Analysis Dataflow"/>
+   <img src="ReadMe%20Images/step4.png" height="40%" width="40%" display="inline-block" alt="Image Analysis Dataflow"/>
    </p>
 
-   - **Step 4: Routing**
-     - Watch as the program maps your route from the origin to the destination!
+   - **Step 4: Autocompletion**
+     - Watch as the program autocomplete your search! Double-click to open in Google!
    <p align="center">
-   <img src="ReadMe%20Images/step4.png" height="60%" width="60%" alt="Image Analysis Dataflow"/>
+   <img src="ReadMe%20Images/step5.png" height="60%" width="60%" alt="Image Analysis Dataflow"/>
    </p>
 
 
