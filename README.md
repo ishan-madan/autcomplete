@@ -7,6 +7,7 @@ Autocomplete demonstrates a graphical user interface (GUI) that provides autocom
 
 ### 1. Autocompletor Interface
 **Overview:** Defines methods for autocomplete functionality, including initialization and retrieving top matching terms.
+<br/><br/>
 **Key Features:**
 - `topMatches(String prefix, int k)`: Returns top k matching terms based on a prefix.
 - `initialize(String[] terms, double[] weights)`: Initializes internal state with terms and corresponding weights.
@@ -14,24 +15,28 @@ Autocomplete demonstrates a graphical user interface (GUI) that provides autocom
 
 ### 2. BruteAutocomplete.java
 **Overview:** Implements autocomplete using a brute force approach.
+<br/><br/>
 **Key Features:**
 - Linear search for finding matching terms.
 - Suitable for small datasets or when simplicity is preferred.
 
 ### 3. BinarySearchAutocomplete.java
 **Overview:** Implements autocomplete using binary search on a sorted dataset.
+<br/><br/>
 **Key Features:**
 - Efficient retrieval of matching terms using binary search.
 - Requires the data to be sorted beforehand.
 
 ### 4. HashListAutocomplete.java
 **Overview:** Implements autocomplete using a hash list for efficient term retrieval.
+<br/><br/>
 **Key Features:**
 - Uses hash tables to store and retrieve terms.
 - Balances speed and memory usage, suitable for medium to large datasets.
 
 ### 5. AutocompleteGUI.java
 **Overview:** Provides a graphical user interface for interacting with autocomplete functionality.
+<br/><br/>
 **Key Features:**
 - Allows users to input text and receive autocomplete suggestions.
 - Supports online search functionality based on selected suggestions.
@@ -39,12 +44,14 @@ Autocomplete demonstrates a graphical user interface (GUI) that provides autocom
 
 ### 6. FileSelector.java
 **Overview:** Utility class for selecting files from the system.
+<br/><br/>
 **Key Features:**
 - Provides methods to select a file for loading autocomplete data.
 - Used by AutocompleteGUI to initialize autocomplete implementations from a chosen file.
 
 ### 7. AutocompleteMain.java
 **Overview:** Main class to initialize the GUI with selected autocomplete implementation.
+<br/><br/>
 **Key Features:**
 - Configures and launches the GUI with user-selected autocomplete implementation (Brute Force, Binary Search, or Hash List).
 - Handles file selection and GUI initialization.
@@ -52,14 +59,16 @@ Autocomplete demonstrates a graphical user interface (GUI) that provides autocom
 
 ### 8. Term.java
 **Overview:** Represents a term with associated weight for autocomplete purposes.
+<br/><br/>
 **Key Features:**
 - Stores a word (term) and its weight.
 - Provides methods to retrieve the word and weight.
 
-### 9. AutocompleteData.txt (Sample)
+### 9. AutocompleteData.txt (Sample File Name)
 **Overview:** Sample text file containing autocomplete data.
+<br/><br/>
 **Key Features:**
-- Format: `weight\tterm`.
+- Format: `weight\term`.
 - Used by AutocompleteMain to initialize autocomplete implementations.
 
 ## $\textsf{\color{purple} Languages and Utilities Used}$
