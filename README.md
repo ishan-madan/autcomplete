@@ -1,9 +1,9 @@
- # $\textsf{\color{lime} Autocomplete}$
+ # $\textsf{\color{skyblue} Autocomplete}$
 
-## $\textsf{\color{purple} Description}$
+## $\textsf{\color{lightgreen} Description}$
 Autocomplete demonstrates a graphical user interface (GUI) that provides autocomplete suggestions based on user input. It supports multiple autocomplete algorithms such as Brute Force, Binary Search, and Hash List, each offering different trade-offs between speed and memory usage. Users can input text, receive autocomplete suggestions, and perform online searches directly from the application.
 
-## $\textsf{\color{purple} Class Overview}$
+## $\textsf{\color{lightgreen} Class Overview}$
 
 ### 1. Autocompletor Interface
 **Overview:** Defines methods for autocomplete functionality, including initialization and retrieving top matching terms.
@@ -71,13 +71,13 @@ Autocomplete demonstrates a graphical user interface (GUI) that provides autocom
 - Format: `weight\term`.
 - Used by AutocompleteMain to initialize autocomplete implementations.
 
-## $\textsf{\color{purple} Languages and Utilities Used}$
+## $\textsf{\color{lightgreen} Languages and Utilities Used}$
 - Java
 - Data Structures and Agorithms
 
-# $\textsf{\color{lime} Autocomplete Program Walkthrough}$
+# $\textsf{\color{skyblue} Autocomplete Program Walkthrough}$
 
-## $\textsf{\color{purple} Cloning the Repository}$
+## $\textsf{\color{lightgreen} Cloning the Repository}$
 
 1. **Clone the Repository:**
    - Open your terminal or command prompt.
@@ -88,7 +88,7 @@ Autocomplete demonstrates a graphical user interface (GUI) that provides autocom
      ```
      Replace `<repository_url>` with the actual URL of the GitHub repository.
 
-## $\textsf{\color{purple} Setting Up the Environment}$
+## $\textsf{\color{lightgreen} Setting Up the Environment}$
 
 2. **Environment Setup:**
    - Ensure you have Java installed on your system. You can check by running:
@@ -97,7 +97,7 @@ Autocomplete demonstrates a graphical user interface (GUI) that provides autocom
      ```
    - Install any necessary IDE (Integrated Development Environment) such as IntelliJ IDEA, Eclipse, or use a text editor like Visual Studio Code.
 
-## $\textsf{\color{purple} Program Walkthrough}$
+## $\textsf{\color{lightgreen} Program Walkthrough}$
 
 3. **Program Walkthrough:**
    - **Step 1: Starting the Program**
